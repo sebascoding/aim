@@ -191,5 +191,7 @@ void Position::reset() {
 	
 	std::memset(this->byTypeBB, 0, sizeof(this->byTypeBB));
 	std::memset(this->byColorBB, 0, sizeof(this->byColorBB));
-	std::memset(this->pieces, NO_PIECE, sizeof(this->pieces));	
+	//std::memset(this->pieces, NO_PIECE, sizeof(this->pieces));	
+	
+	std::fill_n(this->pieces, SQUARE_NUM, NO_PIECE);
 }
